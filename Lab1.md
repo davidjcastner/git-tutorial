@@ -1,6 +1,13 @@
-# Lab 1 - Creating a Repo and making the first commit
+# Lab 1 - Creating a repository and making the first commit
 
-Commands used in this lab:
+>**What is Repository?**  
+Repository is commonly referred to as a “repo”.  
+A repository is a project’s folder/directory.  
+It stores the commits of a project as a series of referenced objects called HEADs.  
+There are two versions of GitHub repos, public and private. Public ones are free, and you have to pay for private ones.  
+The name, “username/organization.github.io”, is reserved repo for the user or organization GitHub page (website).
+
+## Commands used in this lab
 
 **git clone _url_** - clones a remote repository to your local machine  
 **git add _files_** - adds changes that you made to the staging area  
@@ -12,7 +19,7 @@ Commands used in this lab:
 Create a repository on the website. Name the repository `git-tutorial`, and select the option to **Initialize this repository with a README**. The rest of the options can be left blank.
 
 ### Step Two
-
+-m
 Clone the repository to your local machine. To do this: open up the terminal or git shell and navigate to where you want the repository to be stored. To navigate in the terminal the command `cd path/to/directory/` can be used. Looking up a cheat sheet or basic tutorial for command line may be useful if you are not familiar with it.
 
 Once you have navigated to the location you want the repository to be stored, clone the repository with the command `git clone https://github.com/username/git-tutorial.git` or `git clone git@github.com:username/git-tutorial.git` **inserting your own _username_**. You can copy the url address from the GitHub website as well. If you are using the windows git shell that came with the desktop, you will most likely be using the ssh url. Cloning the repository makes a copy of the repository on your local machine. The repository will be a folder on your computer that you can navigate to in any file explorer.
