@@ -82,6 +82,6 @@ The file languages.txt is now included in your local repository. The next lab wi
 **Lab 1 complete: Congratulations you have made your first repository and commit!**
 
 Next lab:
-**[Lab 2: Understanding remote and local work](Lab2.md)**
+**[Lab 2: Understanding remote and local work](http://davidjcastner.github.io/git-tutorial/Lab2)**
 
-[Return to main page](https://github.com/davidjcastner/git-tutorial)
+[Return to main page](http://davidjcastner.github.io/git-tutorial/)
