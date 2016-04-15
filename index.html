@@ -20,74 +20,98 @@
 
     <section class="main-content">
       <h1>
-<a id="github--git-tutorial" class="anchor" href="#github--git-tutorial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GitHub &amp; git Tutorial</h1>
+<a id="lab-1---creating-a-repository-and-making-the-first-commit" class="anchor" href="#lab-1---creating-a-repository-and-making-the-first-commit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lab 1 - Creating a repository and making the first commit</h1>
 
 <blockquote>
-<p><strong>What is GitHub?</strong></p>
-
-<p>Three core functions of GitHub</p>
-
-<ul>
-<li>A common area to store a project’s files</li>
-<li>A way to track changes</li>
-<li>A way for multiple people to work on a project in parallel</li>
-</ul>
+<p><strong>What is Repository?</strong><br>
+Repository is commonly referred to as a “repo”.<br>
+A repository is a project’s folder/directory.<br>
+It stores the commits of a project as a series of referenced objects called HEADs.<br>
+There are two versions of GitHub repos, public and private. Public ones are free, and you have to pay for private ones.<br>
+The name, “username/organization.github.io”, is reserved repo for the user or organization GitHub page (website).</p>
 </blockquote>
 
-<h3>
-<a id="setting-up-a-github-account" class="anchor" href="#setting-up-a-github-account" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up a GitHub account</h3>
+<h2>
+<a id="commands-used-in-this-lab" class="anchor" href="#commands-used-in-this-lab" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands used in this lab</h2>
 
-<p>Creating an account: <a href="https://github.com/">https://github.com/</a><br>
-Download the desktop app: <a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
-
-<h3>
-<a id="requirements-for-the-labs" class="anchor" href="#requirements-for-the-labs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements for the labs</h3>
-
-<ul>
-<li>either terminal or the desktop git shell</li>
-<li>a GitHub account</li>
-<li>a text editor</li>
-</ul>
-
-<p>If you are not familiar with using the terminal, I recommend keeping this cheat sheet on hand and perhaps going though a basic terminal tutorial. Simply search Google or YouTube for "terminal tutorial" plus your operating system. Both the git shell and mac OS use linux based commands</p>
-
-<p><strong><a href="https://gist.github.com/LeCoupa/122b12050f5fb267e75f">Terminal Commands Cheat Sheet</a></strong></p>
+<p><strong>git clone <em>url</em></strong> - clones a remote repository to your local machine<br>
+<strong>git add <em>files</em></strong> - adds changes that you made to the staging area<br>
+<strong>git commit -m <em>“commit message”</em></strong> - commits all staged work and provides a short message about the committed work</p>
 
 <h3>
-<a id="basic-git-commands-used-throughout-the-labs" class="anchor" href="#basic-git-commands-used-throughout-the-labs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic git Commands (used throughout the labs)</h3>
+<a id="step-one" class="anchor" href="#step-one" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step One</h3>
 
-<p>All of these commands do not provide any functionality; they only provide useful information, so feel free to use these throughout the labs.</p>
-
-<p><strong>git help</strong> - show a list of commands for git and what they do<br>
-<strong>git help <em>command</em></strong> - detailed explanation of what the command does and what the options do<br>
-<strong>git config -l</strong> - list out the configuration settings for git<br>
-<strong>git status</strong> - shows status of current working tree (very useful)<br>
-<strong>git branch</strong> - list out the branches and shows which is the current working branch</p>
+<p>Create a repository on the website. Name the repository <code>git-tutorial</code>, and select the option to <strong>Initialize this repository with a README</strong>. The rest of the options can be left blank.</p>
 
 <h3>
-<a id="labs" class="anchor" href="#labs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Labs</h3>
+<a id="step-two" class="anchor" href="#step-two" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Two</h3>
 
-<p>The following labs will walk though the basic process of creating a repository, adding work to the repository, and some basic management for the repository. The labs need to be completed in order as they build upon each other.</p>
+<p>-m
+Clone the repository to your local machine. To do this: open up the terminal or git shell and navigate to where you want the repository to be stored. To navigate in the terminal the command <code>cd path/to/directory/</code> can be used. Looking up a cheat sheet or basic tutorial for command line may be useful if you are not familiar with it.</p>
 
-<p>The labs are done via command line even though GitHub provides a way for actions to be done through a visual interface. Despite that, I recommend becoming familiar with the git command line tools. It may be very challenging and intimidating at first, but once you get use to it, it will be very useful and saves a lot time.</p>
-
-<p><strong><a href="Lab1.md">Lab 1: Creating a repository and making the first commit</a></strong></p>
-
-<p><strong><a href="Lab2.md">Lab 2: Understanding remote and local work</a></strong></p>
-
-<p><strong><a href="Lab3.md">Lab 3: Creating branches and merging</a></strong></p>
+<p>Once you have navigated to the location you want the repository to be stored, clone the repository with the command <code>git clone https://github.com/username/git-tutorial.git</code> or <code>git clone git@github.com:username/git-tutorial.git</code> <strong>inserting your own <em>username</em></strong>. You can copy the url address from the GitHub website as well. If you are using the windows git shell that came with the desktop, you will most likely be using the ssh url. Cloning the repository makes a copy of the repository on your local machine. The repository will be a folder on your computer that you can navigate to in any file explorer.</p>
 
 <h3>
-<a id="closing-remarks" class="anchor" href="#closing-remarks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Closing Remarks</h3>
+<a id="step-three" class="anchor" href="#step-three" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Three</h3>
 
-<p>Almost anything you do with git/GitHub can be undone, so don’t worry if you mess up. (although figuring out how to undo it can be tricky sometimes)</p>
+<p>Create a file called <code>languages.txt</code> in the repository. This can be done by opening up the location of the repository in a file explorer, right click and select new text file. You can edit this file in your favorite text editor.</p>
 
-<p>If you can’t remember how to do a certain action or don’t know how, just search for it on Google. The top links are usually answers to your question from GitHub Docs or answers on StackOverflow</p>
+<p>In this file, add all of the programming languages that you know. If you don't know any programming languages add a couple that you would like to learn.</p>
+
+<p><strong>Example:</strong> <code>path/to/repo/languages.txt</code></p>
+
+<pre><code>python
+javascript
+c++
+</code></pre>
+
+<p>Once you have added all of the files, save the file.</p>
 
 <h3>
-<a id="issues-with-the-labs" class="anchor" href="#issues-with-the-labs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Issues with the labs</h3>
+<a id="step-four" class="anchor" href="#step-four" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Four</h3>
 
-<p>If you experience issues with the labs feel free to post the issues in the issues section of this repository on GitHub, and I will try to help you when I get some time.</p>
+<p>Navigate to the location of your repository in the terminal or git shell. If you are using the same terminal as before, the command should be <code>cd git-tutorial</code>.</p>
+
+<p>Verify that you have added and saved the file <code>languages.txt</code> to the right location with the command <code>git status</code>. You should see that the file is currently untracked:</p>
+
+<pre><code>On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    languages.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+</code></pre>
+
+<p>Having untracked files means that they will not be included in the repository.</p>
+
+<p>Add the file to the staging area with the command <code>git add languages.txt</code>. The staging area keeps track of all the changes that you will add to the repository in the form a commit which is the next step. This allows you select which changes you want to add without removing other work that you have done.</p>
+
+<p>Using the command, <code>git status</code>, again will show that languages.txt has been added to the staging area:</p>
+
+<pre><code>On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+    new file:   languages.txt
+
+</code></pre>
+
+<h3>
+<a id="step-five" class="anchor" href="#step-five" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Five</h3>
+
+<p>Next you can commit the changes in the staging area to repository with the command <code>git commit -m "add languages"</code>. The <code>-m</code> option for the commit command allows for a message to attached to the work that was done. This message is very useful for tracking what changes were done.</p>
+
+<p>The file languages.txt is now included in your local repository. The next lab will cover uploading it to the remote repository on GitHub.</p>
+
+<p><strong>Lab 1 complete: Congratulations you have made your first repository and commit!</strong></p>
+
+<p>Next lab:
+<strong><a href="Lab2.md">Lab 2: Understanding remote and local work</a></strong></p>
+
+<p><a href="https://github.com/davidjcastner/git-tutorial">Return to main page</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/davidjcastner/git-tutorial">Git-tutorial</a> is maintained by <a href="https://github.com/davidjcastner">davidjcastner</a>.</span>
