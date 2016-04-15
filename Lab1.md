@@ -80,3 +80,8 @@ Next you can commit the changes in the staging area to repository with the comma
 The file languages.txt is now included in your local repository. The next lab will cover uploading it to the remote repository on GitHub.
 
 **Lab 1 complete: Congratulations you have made your first repository and commit!**
+
+Next lab:
+**[Lab 2: Understanding remote and local work](Lab2.md)**
+
+[Return to main page](README.md)

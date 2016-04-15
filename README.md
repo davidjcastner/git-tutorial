@@ -1,6 +1,5 @@
 # GitHub & git Tutorial
 
-
 > **What is GitHub?**
 
 >Three core functions of GitHub

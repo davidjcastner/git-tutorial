@@ -42,4 +42,26 @@ c++
 
 In the terminal or git shell, run the command `git status`. Notice how your machine thinks that it is still up to date.
 
-Using the command `git fetch` will check the repository for any updates since the last you checked.
+Using the command `git fetch` will check the repository for any updates since the last you checked. If you run `git status` again, you will notice that your local machine recognizing that it is one commit behind:
+
+```
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+nothing to commit, working directory clean
+```
+
+### Step Five
+
+In order to get the changes from the remote repository onto your local machine, run the command `git pull`.
+
+If you open up `languages.txt` in your text editor, you should see the line of text that you added.
+
+The pull command actually did a merge as part of the process which will be covered in the next lab.
+
+**Lab 2 complete: Congratulations you were able to push and pull commits!**
+
+Next lab:
+**[Lab 3: Creating branches and merging](Lab3.md)**
+
+[Return to main page](README.md)
