@@ -84,4 +84,4 @@ The file languages.txt is now included in your local repository. The next lab wi
 Next lab:
 **[Lab 2: Understanding remote and local work](Lab2.md)**
 
-[Return to main page](README.md)
+[Return to main page](/)
