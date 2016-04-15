@@ -53,4 +53,4 @@ If you can’t remember how to do a certain action or don’t know how, just sea
 
 ### Issues with the labs
 
-If you experience issues with the labs feel free to post the issues in the issues section of this repository, and I will try to help you when I get some time.
+If you experience issues with the labs feel free to post the issues in the issues section of this repository on GitHub, and I will try to help you when I get some time.
