@@ -19,7 +19,7 @@ The name, “username/organization.github.io”, is reserved repo for the user o
 Create a repository on the website. Name the repository `git-tutorial`, and select the option to **Initialize this repository with a README**. The rest of the options can be left blank.
 
 ### Step Two
--m
+
 Clone the repository to your local machine. To do this: open up the terminal or git shell and navigate to where you want the repository to be stored. To navigate in the terminal the command `cd path/to/directory/` can be used. Looking up a cheat sheet or basic tutorial for command line may be useful if you are not familiar with it.
 
 Once you have navigated to the location you want the repository to be stored, clone the repository with the command `git clone https://github.com/username/git-tutorial.git` or `git clone git@github.com:username/git-tutorial.git` **inserting your own _username_**. You can copy the url address from the GitHub website as well. If you are using the windows git shell that came with the desktop, you will most likely be using the ssh url. Cloning the repository makes a copy of the repository on your local machine. The repository will be a folder on your computer that you can navigate to in any file explorer.
