@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Git-tutorial by davidjcastner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Lab 1</h1>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="lab-1---creating-a-repository-and-making-the-first-commit" class="anchor" href="#lab-1---creating-a-repository-and-making-the-first-commit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lab 1 - Creating a repository and making the first commit</h1>
+
+<blockquote>
+<p><strong>What is Repository?</strong><br>
+Repository is commonly referred to as a “repo”.<br>
+A repository is a project’s folder/directory.<br>
+It stores the commits of a project as a series of referenced objects called HEADs.<br>
+There are two versions of GitHub repos, public and private. Public ones are free, and you have to pay for private ones.<br>
+The name, “username/organization.github.io”, is reserved repo for the user or organization GitHub page (website).</p>
+</blockquote>
+
+<h2>
+<a id="commands-used-in-this-lab" class="anchor" href="#commands-used-in-this-lab" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands used in this lab</h2>
+
+<p><strong>git clone <em>url</em></strong> - clones a remote repository to your local machine<br>
+<strong>git add <em>files</em></strong> - adds changes that you made to the staging area<br>
+<strong>git commit -m <em>“commit message”</em></strong> - commits all staged work and provides a short message about the committed work</p>
+
+<h3>
+<a id="step-one" class="anchor" href="#step-one" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step One</h3>
+
+<p>Create a repository on the website. Name the repository <code>git-tutorial</code>, and select the option to <strong>Initialize this repository with a README</strong>. The rest of the options can be left blank.</p>
+
+<h3>
+<a id="step-two" class="anchor" href="#step-two" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Two</h3>
+
+<p>-m
+Clone the repository to your local machine. To do this: open up the terminal or git shell and navigate to where you want the repository to be stored. To navigate in the terminal the command <code>cd path/to/directory/</code> can be used. Looking up a cheat sheet or basic tutorial for command line may be useful if you are not familiar with it.</p>
+
+<p>Once you have navigated to the location you want the repository to be stored, clone the repository with the command <code>git clone https://github.com/username/git-tutorial.git</code> or <code>git clone git@github.com:username/git-tutorial.git</code> <strong>inserting your own <em>username</em></strong>. You can copy the url address from the GitHub website as well. If you are using the windows git shell that came with the desktop, you will most likely be using the ssh url. Cloning the repository makes a copy of the repository on your local machine. The repository will be a folder on your computer that you can navigate to in any file explorer.</p>
+
+<h3>
+<a id="step-three" class="anchor" href="#step-three" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Three</h3>
+
+<p>Create a file called <code>languages.txt</code> in the repository. This can be done by opening up the location of the repository in a file explorer, right click and select new text file. You can edit this file in your favorite text editor.</p>
+
+<p>In this file, add all of the programming languages that you know. If you don't know any programming languages add a couple that you would like to learn.</p>
+
+<p><strong>Example:</strong> <code>path/to/repo/languages.txt</code></p>
+
+<pre><code>python
+javascript
+c++
+</code></pre>
+
+<p>Once you have added all of the files, save the file.</p>
+
+<h3>
+<a id="step-four" class="anchor" href="#step-four" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Four</h3>
+
+<p>Navigate to the location of your repository in the terminal or git shell. If you are using the same terminal as before, the command should be <code>cd git-tutorial</code>.</p>
+
+<p>Verify that you have added and saved the file <code>languages.txt</code> to the right location with the command <code>git status</code>. You should see that the file is currently untracked:</p>
+
+<pre><code>On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    languages.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+</code></pre>
+
+<p>Having untracked files means that they will not be included in the repository.</p>
+
+<p>Add the file to the staging area with the command <code>git add languages.txt</code>. The staging area keeps track of all the changes that you will add to the repository in the form a commit which is the next step. This allows you select which changes you want to add without removing other work that you have done.</p>
+
+<p>Using the command, <code>git status</code>, again will show that languages.txt has been added to the staging area:</p>
+
+<pre><code>On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+    new file:   languages.txt
+
+</code></pre>
+
+<h3>
+<a id="step-five" class="anchor" href="#step-five" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Five</h3>
+
+<p>Next you can commit the changes in the staging area to repository with the command <code>git commit -m "add languages"</code>. The <code>-m</code> option for the commit command allows for a message to attached to the work that was done. This message is very useful for tracking what changes were done.</p>
+
+<p>The file languages.txt is now included in your local repository. The next lab will cover uploading it to the remote repository on GitHub.</p>
+
+<p><strong>Lab 1 complete: Congratulations you have made your first repository and commit!</strong></p>
+
+<p>Next lab:
+<strong><a href="/Lab2">Lab 2: Understanding remote and local work</a></strong></p>
+
+<p><a href="/">Return to main page</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/davidjcastner/git-tutorial">Git-tutorial</a> is maintained by <a href="https://github.com/davidjcastner">davidjcastner</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+
+  </body>
+</html>

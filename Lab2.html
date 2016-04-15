@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Git-tutorial by davidjcastner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Lab 2</h1>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="lab-2---understanding-remote-and-local-work" class="anchor" href="#lab-2---understanding-remote-and-local-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lab 2 - Understanding remote and local work</h1>
+
+<blockquote>
+<p><strong>Local</strong> refers to any work done on the machine you are working on.
+<strong>Remote</strong> refers to the repository stored on GitHub.</p>
+</blockquote>
+
+<h2>
+<a id="commands-used-in-this-lab" class="anchor" href="#commands-used-in-this-lab" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands used in this lab</h2>
+
+<p><strong>git remote -v</strong> - displays the location of the remote repository<br>
+<strong>git fetch</strong> - checks the remote repository and updates your .git file (hidden) about changes in the remote repository<br>
+<strong>git pull</strong> - pulls any commits from the remote repository to your local repository (specific to your working branch)<br>
+<strong>git push</strong> - pushes any local commits to the remote repository (specific to your branch)</p>
+
+<h3>
+<a id="step-one" class="anchor" href="#step-one" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step One</h3>
+
+<p>From lab 1 on the GitHub website, you will notice that your commit is not there. That is because all of the work that you did only occured on your local machine, and your commit need to be pushed to GitHub before they will show up remotely.</p>
+
+<p>First verify that the remote location is set to your GitHub with the <code>git remote -v</code> command. It should display the same URL that you used to clone the repository in lab 1.</p>
+
+<h3>
+<a id="step-two" class="anchor" href="#step-two" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Two</h3>
+
+<p>Next, push the commit that you made with <code>git push</code>. After pushing, you should be able to see the new file <code>languages.txt</code> in your GitHub repository on the website.</p>
+
+<h3>
+<a id="step-three" class="anchor" href="#step-three" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Three</h3>
+
+<p>In order in demonstrate how to get changes from the remote repository, you will need to make a change to one of the files through the website.</p>
+
+<p>Open up GitHub in your browser and go to your git-tutorial repository. Select the languages.txt file and then select the option to edit it. It will be a pencil icon in the upper right hand corner.</p>
+
+<p>Add a line of text at the top of file. If you aren't creative, you can add <code>Look a change!</code> to the top of the file. After adding the text, commit the changes (green button at the bottom of the page). This makes a commit to the repository just like in lab 1, but through the web browser.</p>
+
+<p>Your languages.txt file should now look like this:</p>
+
+<pre><code>Look a change!
+
+python
+javascript
+c++
+</code></pre>
+
+<h3>
+<a id="step-four" class="anchor" href="#step-four" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Four</h3>
+
+<p>In the terminal or git shell, run the command <code>git status</code>. Notice how your machine thinks that it is still up to date.</p>
+
+<p>Using the command <code>git fetch</code> will check the repository for any updates since the last you checked. If you run <code>git status</code> again, you will notice that your local machine recognizing that it is one commit behind:</p>
+
+<pre><code>On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+nothing to commit, working directory clean
+</code></pre>
+
+<h3>
+<a id="step-five" class="anchor" href="#step-five" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Five</h3>
+
+<p>In order to get the changes from the remote repository onto your local machine, run the command <code>git pull</code>.</p>
+
+<p>If you open up <code>languages.txt</code> in your text editor, you should see the line of text that you added.</p>
+
+<p>The pull command actually did a merge as part of the process which will be covered in the next lab.</p>
+
+<p><strong>Lab 2 complete: Congratulations you were able to push and pull commits!</strong></p>
+
+<p>Next lab:
+<strong><a href="/Lab3">Lab 3: Creating branches and merging</a></strong></p>
+
+<p><a href="/">Return to main page</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/davidjcastner/git-tutorial">Git-tutorial</a> is maintained by <a href="https://github.com/davidjcastner">davidjcastner</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+
+  </body>
+</html>
