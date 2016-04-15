@@ -64,4 +64,4 @@ The pull command actually did a merge as part of the process which will be cover
 Next lab:
 **[Lab 3: Creating branches and merging](Lab3.md)**
 
-[Return to main page](README.md)
+[Return to main page](https://github.com/davidjcastner/git-tutorial)
