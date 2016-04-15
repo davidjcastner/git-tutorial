@@ -37,4 +37,39 @@ Once you have added all of the files, save the file.
 
 Navigate to the location of your repository in the terminal or git shell. If you are using the same terminal as before, the command should be `cd git-tutorial`.
 
-Verify that you have added and saved the file `languages.txt` to the right location with the command `git status`
+Verify that you have added and saved the file `languages.txt` to the right location with the command `git status`. You should see that the file is currently untracked:
+
+```
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	languages.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+Having untracked files means that they will not be included in the repository.
+
+Add the file to the staging area with the command `git add languages.txt`. The staging area keeps track of all the changes that you will add to the repository in the form a commit which is the next step. This allows you select which changes you want to add without removing other work that you have done.
+
+Using the command, `git status`, again will show that languages.txt has been added to the staging area:
+
+```
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   languages.txt
+
+```
+
+### Step Five
+
+Next you can commit the changes in the staging area to repository with the command `git commit -m "add languages"`. The `-m` option for the commit command allows for a message to attached to the work that was done. This message is very useful for tracking what changes were done.
+
+The file languages.txt is now included in your local repository. The next lab will cover uploading it to the remote repository on GitHub.
+
+**Lab 1 complete: Congratulations you have made your first repository and commit!**
