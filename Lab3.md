@@ -190,7 +190,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 >**Resolving conflicts**
 
->When there is a conflict, git adds several line into your file to indicate where the conflicts are. Git uses the lines `<<<<<<< HEAD`, `=======`, and `>>>>>>> branchname` to tell you which changes were from each branch.
+>When there is a conflict, git adds several lines into your file to indicate where the conflicts are. Git uses the lines `<<<<<<< HEAD`, `=======`, and `>>>>>>> branchname` to tell you which changes were from each branch.
 * Anything between the `<<<<<<< HEAD` and `=======` lines is content from the branch that you are merging into (the master branch in this example)
 * Anything between the `=======` and `>>>>>>> branchname` lines, is content from the branch that you specified in `git merge branchname` (the language-strength branch in this example)
 
