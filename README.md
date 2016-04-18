@@ -1,8 +1,7 @@
 # GitHub & git Tutorial
 
-> **What is GitHub?**
-
->Three core functions of GitHub
+**What is GitHub & git?**  
+Three core functions of GitHub & git
 * A common area to store a project’s files
 * A way to track changes
 * A way for multiple people to work on a project in parallel
