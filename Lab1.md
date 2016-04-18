@@ -1,7 +1,8 @@
 # Lab 1 - Creating a repository and making the first commit
 
 >**What is Repository?**  
-Repository is commonly referred to as a “repo”.  
+
+>Repository is commonly referred to as a “repo”.  
 A repository is a project’s folder/directory.  
 It stores the commits of a project as a series of referenced objects called HEADs.  
 There are two versions of GitHub repos, public and private. Public ones are free, and you have to pay for private ones.  
