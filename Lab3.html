@@ -1,1 +1,291 @@
-Coming soon check back later
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>GitHub &amp; GIT Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Lab 3</h1>
+      <h2 class="project-tagline">Creating branches and merging</h2>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="lab-3---creating-branches-and-merging" class="anchor" href="#lab-3---creating-branches-and-merging" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lab 3 - Creating branches and merging</h1>
+
+<blockquote>
+<p><strong>What are Branches?</strong></p>
+
+<p>Branches allow someone to work on a project without changing existing code.<br>
+Example: You have a project with a working website. If you want to add a new feature to the website, you would create a branch which is a replica of the project for you to work with.<br>
+A good practice is to keep the master branch as a working version of the software, and create a branch for developing individual features.<br>
+The following branch names are reserved: <code>master</code> and <code>gh-pages</code>. <code>gh-pages</code> is a branch for a project’s GitHub page (website). <code>master</code>  is the default branch of a repository.  </p>
+
+<p>Below is an visual to illustrate branches where each node is a commit.<br>
+<img src="https://blog.seibert-media.net/wp-content/uploads/2015/07/Git-Branches-1.png" style="padding:16px; border-radius: 20px; max-width:600px;"></p>
+</blockquote>
+
+<h2>
+<a id="commands-used-in-this-lab" class="anchor" href="#commands-used-in-this-lab" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands used in this lab</h2>
+
+<p><strong>git branch</strong> - lists all branches on local machine and shows what is the current working branch<br>
+<strong>git checkout -b <em>branchname</em></strong> - creates a new branch with the specified branch name using the current branch as the base<br>
+<strong>git checkout <em>branchname</em></strong> - switches to the specified branch, work that is not committed with not be saved<br>
+<strong>git merge <em>branchname</em></strong> - merges the specified branch into the current working branch, merges are one-way operations</p>
+
+<h3>
+<a id="step-one" class="anchor" href="#step-one" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step One</h3>
+
+<p>In the terminal or git shell, use the command, <code>git branch</code>, to see that there is only one and it is the master branch.</p>
+
+<pre><code>git branch
+
+* master
+</code></pre>
+
+<h3>
+<a id="step-two" class="anchor" href="#step-two" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Two</h3>
+
+<p>Create a new brach called <code>foreign-languages</code> with the command <code>git checkout -b foreign-languages</code>.</p>
+
+<p>Using <code>git branch</code> again shows that there are now two branches and the one you are working in is foreign-languages.</p>
+
+<pre><code>git branch
+
+* foreign-languages
+  master
+</code></pre>
+
+<p>When creating a new branch or switching to a different branch, all untracked work is transferred over to the new branch; however, it is a bad practice to rely on this functionality. So, make sure to commit or stash your work before switching branches.</p>
+
+<h3>
+<a id="step-three" class="anchor" href="#step-three" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Three</h3>
+
+<p>Edit the file <strong>languages.txt</strong> by adding any foreign languages that you know, if you don't know any foreign languages include a language that you might want to learn. <strong>Make sure to include a label for the types of languages (this will help simulate conflicts later in the lab)</strong>. You can also remove the line of text added from lab 2 if you wish.</p>
+
+<p><strong>Example:</strong> <code>path/to/repo/languages.txt</code></p>
+
+<pre><code>programming languages:
+    python
+    javascript
+    c++
+
+foreign languages:
+    french
+</code></pre>
+
+<p><strong>Save the file.</strong></p>
+
+<h3>
+<a id="step-four" class="anchor" href="#step-four" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Four</h3>
+
+<p>Now add and commit the changes with a descriptive commit message, such as <code>add foreign languages</code>. Feel free to look back at lab 1 for reference.</p>
+
+<p>Also push this new branch to GitHub with <code>git push --set-upstream origin foreign-languages</code>. The <code>--set-upstream</code> option tells git where to send future pushes, this is only necessary when making the first push of a new branch. Run <code>git help push</code> to learn more.</p>
+
+<p>If you look on the GitHub website, you should now be able to see the new branch.</p>
+
+<div class="highlight highlight-source-shell"><pre>git add languages.txt
+git commit -m <span class="pl-s"><span class="pl-pds">"</span>add foreign languages<span class="pl-pds">"</span></span>
+git push --set-upstream origin foreign-languages</pre></div>
+
+<h3>
+<a id="step-five" class="anchor" href="#step-five" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Five</h3>
+
+<blockquote>
+<p>To simulate another person working on the project, or if there is a situation that require work on a more pressing feature, you are going to create another branch. Before branches will edit the same file to show how merging works.</p>
+</blockquote>
+
+<p>First, switch back to the master branch since when creating a branch, it uses the current working branch to branch off of. To switch to the master branch use the command, <code>git checkout master</code>.</p>
+
+<p>Using <code>git branch</code> will show that the current branch is master.</p>
+
+<pre><code>git branch
+
+  foreign-languages
+* master
+</code></pre>
+
+<h3>
+<a id="step-six" class="anchor" href="#step-six" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Six</h3>
+
+<p>Create a new branch called <code>language-strength</code>. To create the branch use the command, <code>git checkout -b language-strength</code>.</p>
+
+<p>Using <code>git branch</code> will now show three branches with the selected one being <code>language-strength</code>.</p>
+
+<pre><code>git branch
+
+  foreign-languages
+* language-strength
+  master
+</code></pre>
+
+<h3>
+<a id="step-seven" class="anchor" href="#step-seven" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Seven</h3>
+
+<p>Edit the file <strong>languages.txt</strong> by adding an indicator of how well you know it. Add either weak, average, or strong next to each language. You can also remove the line of text added from lab 2 if you wish.</p>
+
+<p><strong>Example:</strong> <code>path/to/repo/languages.txt</code></p>
+
+<pre><code>python - strong
+javascript - strong
+c++ - weak
+</code></pre>
+
+<p><strong>Save the file.</strong></p>
+
+<h3>
+<a id="step-eight" class="anchor" href="#step-eight" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Eight</h3>
+
+<p>Now add and commit the changes with a descriptive commit message, such as <code>add language strength</code>. Feel free to look back at lab 1 for reference.</p>
+
+<p>Also push this new branch to GitHub with <code>git push --set-upstream origin language-strength</code>. The <code>--set-upstream</code> option tells git where to send future pushes, this is only necessary when making the first push of a new branch. Run <code>git help push</code> to learn more.</p>
+
+<p>If you look on the GitHub website, you should now be able to see the new branch.</p>
+
+<div class="highlight highlight-source-shell"><pre>git add languages.txt
+git commit -m <span class="pl-s"><span class="pl-pds">"</span>add language strength<span class="pl-pds">"</span></span>
+git push --set-upstream origin language-strength</pre></div>
+
+<h3>
+<a id="step-nine" class="anchor" href="#step-nine" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Nine</h3>
+
+<p>Now there are two branches with features that need to be merged into the master branch. First, switch back to the master branch with <code>git checkout master</code>. Running <code>git branch</code> will verify it.</p>
+
+<pre><code>git branch
+
+  foreign-languages
+  language-strength
+* master
+</code></pre>
+
+<h3>
+<a id="step-ten" class="anchor" href="#step-ten" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Ten</h3>
+
+<p>To merge the <strong>foreign-languages</strong> branche into master use the command, <code>git merge foreign-languages</code>. The merge will be done automatically by git since there weren't any changes to the master branch since foreign-languages was created. If a text editor comes up in terminal, use <code>ctrl+x</code> to accept the default message for the merge.</p>
+
+<pre><code>git merge foreign-languages
+Merge made by the 'recursive' strategy.
+ languages.txt | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+</code></pre>
+
+<p><strong>First merge done</strong></p>
+
+<h3>
+<a id="step-eleven" class="anchor" href="#step-eleven" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Eleven</h3>
+
+<p>Now, merge the <strong>language-strength</strong> branch with <code>git merge language-strength</code>. This time there will be conflicts because the <strong>languages.txt</strong> was editted by both branches.</p>
+
+<pre><code>git merge language-strength
+Auto-merging languages.txt
+CONFLICT (content): Merge conflict in languages.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+
+<p>Running <code>git status</code> will show which files have conflicts.</p>
+
+<pre><code>On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Unmerged paths:
+  (use "git add &lt;file&gt;..." to mark resolution)
+
+    both modified:   languages.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre>
+
+<h3>
+<a id="step-twelve" class="anchor" href="#step-twelve" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Twelve</h3>
+
+<blockquote>
+<p><strong>Resolving conflicts</strong></p>
+
+<p>When there is a conflict, git adds several lines into your file to indicate where the conflicts are. Git uses the lines <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branchname</code> to tell you which changes were from each branch.</p>
+
+<ul>
+<li>Anything between the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> lines is content from the branch that you are merging into (the master branch in this example)</li>
+<li>Anything between the <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branchname</code> lines, is content from the branch that you specified in <code>git merge branchname</code> (the language-strength branch in this example)</li>
+</ul>
+
+<p>Resolving conflicts can be done in three ways, and it is up to the person merging to decide</p>
+
+<ul>
+<li>Only use the code from the branch merging into: the code between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code>
+</li>
+<li>Only use the code from the branch merging from: the code between <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branchname</code>
+</li>
+<li>Rewrite the section of code</li>
+</ul>
+
+<p>Make sure to delete the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branchname</code> lines afterwards</p>
+</blockquote>
+
+<p>Here is what the languages.txt file will look like after git detected the conflict:</p>
+
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+programming languages:
+    python
+    javascript
+    c++
+
+foreign languages:
+    french
+=======
+python - strong
+javascript - strong
+c++ - weak
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; language-strength
+</code></pre>
+
+<p>To resolve the conflict, keep the foreign languages and add the language strength to all languages.</p>
+
+<p><strong>Example:</strong> <code>path/to/repo/languages.txt</code></p>
+
+<pre><code>programming languages:
+    python - strong
+    javascript - strong
+    c++ - weak
+
+foreign languages:
+    french - weak
+</code></pre>
+
+<p><strong>Save the file.</strong></p>
+
+<h3>
+<a id="step-twelve-1" class="anchor" href="#step-twelve-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step Twelve</h3>
+
+<p>After the conflict has been resolved, the merge can be completed. The changes to make the resolve are currently untracked, so the changes need to be added and then committed. The commit message should include a notification of the merge.</p>
+
+<pre><code>git add languages.txt
+git commit -m "Merge branch 'language-strength'"
+</code></pre>
+
+<p>Finally the merges can be pushed to GitHub with a <code>git push</code>. Check on the GitHub website to verify.</p>
+
+<p><strong>Lab 3 complete: Congratulations you have successfully creating some branches and merged them together!</strong></p>
+
+<p><a href="http://davidjcastner.github.io/git-tutorial/">Return to main page</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/davidjcastner/git-tutorial">GitHub &amp; GIT Tutorial</a> is maintained by <a href="https://github.com/davidjcastner">davidjcastner</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+
+  </body>
+</html>
