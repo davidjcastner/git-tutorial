@@ -1,5 +1,7 @@
-Look a change!
+programming languages:
+    python
+    javascript
+    c++
 
-python
-javascript
-c++
+foreign languages:
+    french
