@@ -1,7 +1,0 @@
-programming languages:
-    python - strong
-    javascript - strong
-    c++ - weak
-
-foreign languages:
-    french - weak
